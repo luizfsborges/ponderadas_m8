@@ -1,3 +1,9 @@
+def main():
+    print('Hi from simple_chat.')
+
+
+if __name__ == '__main__':
+    main()
 import rclpy
 from rclpy.node import Node
 from std_msgs.msg import String
