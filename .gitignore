@@ -1,3 +1,10 @@
+# Custom
+
+*.test.py
+/ponderada_3/build
+/ponderada_3/install
+/ponderada_3/log
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -118,7 +125,6 @@ celerybeat.pid
 
 # SageMath parsed files
 *.sage.py
-*.test.py
 
 # Environments
 .env
