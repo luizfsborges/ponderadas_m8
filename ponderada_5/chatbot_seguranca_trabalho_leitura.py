@@ -39,20 +39,14 @@ def setup_langchain():
 def main():
     langchain_chain = setup_langchain()
 
-    def generate_response(text):
-        response = ""
-        for s in langchain_chain.stream(text):
-            response += s
-            iface.update("output", response)
-        return response
-
     iface = gr.Interface(
-        fn=generate_response,
+        fn=langchain_chain.stream,
         inputs=["text"],
         outputs="text",
         live=True,
         title="LangChain Chat",
         description="Answer questions based on context using LangChain",
+
     )
 
     iface.launch()
