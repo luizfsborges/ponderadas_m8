@@ -17,7 +17,6 @@ def audio_p_texto(caminho_audio, idioma):
     except:
         return "Me desculpe entendi o que você falou, tente outro áudio."
     
-
 def tradutor(texto_original, idioma_destino):
     translator = Translator()
     traducao = translator.translate(texto_original, dest=idioma_destino)
